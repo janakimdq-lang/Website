@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Simple Website</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.top {
+    background: black;
+    color: white;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: center;
+}
+
+.top img {
+    width: 250px;
+    border: 3px solid #00c3ff;
+}
+
+.top button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+.container {
+    display: flex;
+    padding: 30px;
+    gap: 40px;
+}
+.left {
+    width: 70%;
+}
+
+.left h2 {
+    border-bottom: 3px solid green;
+    padding-bottom: 5px;
+}
+.box {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.box img {
+    width: 120px;
+}
+.right {
+    width: 30%;
+}
+.news {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.news img {
+    width: 60px;
+    height: 60px;
+}
+
+.news a {
+    text-decoration: none;
+    color: black;
+}
+
+.news a:hover {
+    color: green;
+}
+.signup {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+.signup input {
+    width: 100%;
+    padding: 8px;
+    margin: 8px 0;
+}
+
+.signup button {
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+<div class="top">
+    <img src="./lorem.jpg">
+    <div>
+        <h2>Welcome to Our Website</h2>
+        <p>We provide high-quality services and creative solutions.</p>
+        <p>Our goal is to help your business grow and succeed online.</p>
+        <button>Read more</button>
+    </div>
+</div>
+<div class="container">
+    <div class="left">
+        <h2>About Our Website</h2>
+
+        <p>This website is designed to showcase our services and updates.</p>
+        <p>We focus on delivering modern and effective solutions.</p>
+        <div class="box">
+            <img src="./girl.jpg">
+            <div>
+                <h3>Our Mission</h3>
+                <p>To provide high-quality services and build trust with customers.</p>
+            </div>
+        </div>
+        <div class="box">
+            <img src="./aro.jpg">
+            <div>
+                <h3>Our Vision</h3>
+                <p>To become a leading digital service provider and help businesses grow worldwide.</p>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+
+        <h3>Latest News</h3>
+
+        <div class="news">
+            <img src="./dolar.jpg">
+            <a href="index-1.html">New business updates released this week.</a>
+        </div>
+
+        <div class="news">
+            <img src="./balloons.jpg">
+            <a href="index-2.html">New creative design service launched.</a>
+        </div>
+
+        <div class="news">
+            <img src="./bus.jpg">
+            <a href="index-3.html">Our team is expanding with new members.</a>
+        </div>
+        <div class="signup">
+            <h3>Sign Up</h3>
+
+            <form onsubmit="submitForm(event)">
+                <input type="text" id="name" placeholder="Enter Name" required>
+                <input type="email" id="email" placeholder="Enter Email" required>
+                <input type="password" id="password" placeholder="Enter Password" required>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+    </div>
+
+</div>
+<script>
+function submitForm(event) {
+    event.preventDefault();
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+
+    alert("Signup Successful!\nName: " + name + "\nEmail: " + email);
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("password").value = "";
+}
+</script>
+
+</body>
+</html>
